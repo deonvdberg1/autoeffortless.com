@@ -4,305 +4,450 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoEffortless — Effortless Business Communication</title>
-    <meta name="description" content="Managed AI assistant for your WhatsApp and Instagram. We set it up, train it, and monitor it 24/7. You focus on running your business." />
+    <meta name="description" content="South Africa's managed AI assistant for WhatsApp and Instagram. We handle customer enquiries automatically — 24/7. You focus on running your business." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #1a1a2e;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1b1b2f;
             line-height: 1.6;
-            background: #fafafa;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
-        a { color: inherit; }
-        img { max-width: 100%; display: block; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { line-height: 1.2; font-weight: 700; }
-        h1 { font-size: 2.4rem; }
-        h2 { font-size: 1.8rem; margin-bottom: 0.5em; }
-        h3 { font-size: 1.2rem; margin-bottom: 0.4em; }
-        .subtitle { font-size: 1.15rem; color: #555; margin-top: 0.5em; }
-        .section-title { text-align: center; margin-bottom: 2.5rem; position: relative; }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: #2563eb;
-            margin: 0.75rem auto 0;
-            border-radius: 2px;
-        }
-        .section { padding: 4rem 0; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        h1, h2, h3 { line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+        .section { padding: 5rem 0; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title span { display: block; font-size: 0.85rem; font-weight: 600; color: #c8a34e; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+        .section-title h2 { color: #1b1b2f; }
+
         .btn {
             display: inline-block;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
+            padding: 0.9rem 2.2rem;
+            border-radius: 6px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
             border: none;
+            font-family: inherit;
         }
-        .btn-primary {
-            background: #2563eb;
-            color: #fff;
+        .btn-primary { background: #c8a34e; color: #1b1b2f; }
+        .btn-primary:hover { background: #d4b15e; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(200,163,78,0.3); }
+        .btn-outline { background: transparent; color: #c8a34e; border: 2px solid #c8a34e; }
+        .btn-outline:hover { background: #c8a34e; color: #1b1b2f; }
+        .btn-white { background: #ffffff; color: #1b1b2f; }
+        .btn-white:hover { background: #e8e8e8; }
+
+        /* Nav */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(27,27,47,0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            z-index: 100;
+            padding: 0 24px;
         }
-        .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,99,235,0.3); }
-        .btn-secondary {
-            background: transparent;
-            color: #2563eb;
-            border: 2px solid #2563eb;
-        }
-        .btn-secondary:hover { background: #2563eb; color: #fff; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        nav .logo { font-weight: 700; font-size: 1.15rem; color: #ffffff; text-decoration: none; letter-spacing: -0.01em; }
+        nav .logo span { color: #c8a34e; }
+        nav a.nav-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-left: 2rem; transition: color 0.2s; }
+        nav a.nav-link:hover { color: #ffffff; }
+        nav .btn-nav { background: #c8a34e; color: #1b1b2f; padding: 0.5rem 1.2rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; margin-left: 2rem; }
+
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            padding: 4.5rem 0 4rem;
-            text-align: center;
+            background: linear-gradient(135deg, #1b1b2f 0%, #2a2a45 100%);
+            color: #ffffff;
+            padding: 8rem 0 5rem;
+            position: relative;
+            overflow: hidden;
         }
-        .hero h1 { font-size: 2.6rem; margin-bottom: 0.3rem; }
-        .hero .subtitle { color: #a0b4d6; font-size: 1.2rem; margin-bottom: 2rem; }
-        .hero-emoji { font-size: 3rem; margin-bottom: 1rem; }
-        .hero-badges { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
-        .hero-badges span {
-            background: rgba(255,255,255,0.1);
-            padding: 0.4rem 1rem;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(200,163,78,0.06) 0%, transparent 70%);
+        }
+        .hero .container { position: relative; }
+        .hero .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero .badge {
+            display: inline-block;
+            background: rgba(200,163,78,0.15);
+            color: #c8a34e;
+            padding: 0.35rem 1rem;
             border-radius: 20px;
-            font-size: 0.85rem;
-            color: #a0b4d6;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.04em;
         }
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
-        .step-card {
-            background: #fff;
-            border-radius: 12px;
+        .hero h1 { margin-bottom: 1rem; font-size: 3rem; }
+        .hero p { color: rgba(255,255,255,0.65); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; max-width: 480px; }
+        .hero .buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+        .hero .stats { display: flex; gap: 2.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; }
+        .hero .stat .num { font-size: 1.5rem; font-weight: 800; color: #c8a34e; }
+        .hero .stat .label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
+
+        /* Hero right mockup */
+        .hero-mockup {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
             padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #eef0f5;
         }
+        .hero-mockup .chat-header { display: flex; align-items: center; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 1rem; }
+        .hero-mockup .chat-avatar { width: 36px; height: 36px; border-radius: 50%; background: #c8a34e; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: #1b1b2f; }
+        .hero-mockup .chat-name { font-weight: 600; font-size: 0.9rem; }
+        .hero-mockup .chat-status { font-size: 0.75rem; color: #4ade80; }
+        .hero-mockup .messages { display: flex; flex-direction: column; gap: 0.75rem; }
+        .hero-mockup .msg { padding: 0.65rem 1rem; border-radius: 12px; max-width: 85%; font-size: 0.85rem; line-height: 1.5; }
+        .hero-mockup .msg.in { background: rgba(255,255,255,0.08); align-self: flex-start; color: rgba(255,255,255,0.85); }
+        .hero-mockup .msg.out { background: #c8a34e; color: #1b1b2f; align-self: flex-end; }
+
+        /* Problems */
+        .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .problem-card {
+            background: #f8f7f4;
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 3px solid #c8a34e;
+        }
+        .problem-card p { font-size: 0.9rem; color: #555; line-height: 1.6; }
+
+        /* How it works */
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .step-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            background: #f8f7f4;
+            transition: transform 0.2s;
+        }
+        .step-card:hover { transform: translateY(-2px); }
         .step-card .num {
+            width: 44px; height: 44px;
+            background: #1b1b2f;
+            color: #ffffff;
+            border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px; height: 40px;
-            background: #2563eb;
-            color: #fff;
-            border-radius: 50%;
             font-weight: 700;
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
-        .step-card h4 { margin-bottom: 0.4rem; }
-        .step-card p { font-size: 0.9rem; color: #666; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .step-card h4 { font-size: 1rem; margin-bottom: 0.4rem; }
+        .step-card p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .feature-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #eef0f5;
-        }
-        .feature-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .feature-card h4 { margin-bottom: 0.3rem; }
-        .feature-card p { font-size: 0.9rem; color: #555; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; align-items: start; }
-        .pricing-card {
-            background: #fff;
-            border-radius: 12px;
             padding: 2rem;
-            border: 1px solid #eef0f5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.2s;
+            border-radius: 12px;
+            border: 1px solid #e8e6e0;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .pricing-card.popular {
-            border-color: #2563eb;
-            box-shadow: 0 4px 20px rgba(37,99,235,0.12);
-            transform: scale(1.03);
+        .feature-card:hover { border-color: #c8a34e; box-shadow: 0 4px 20px rgba(200,163,78,0.08); }
+        .feature-card h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .feature-card p { font-size: 0.85rem; color: #666; line-height: 1.6; }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+        .pricing-card {
+            background: #ffffff;
+            border: 1px solid #e8e6e0;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            transition: border-color 0.2s;
         }
-        .pricing-card .tier { font-weight: 700; font-size: 1.1rem; color: #2563eb; margin-bottom: 0.5rem; }
-        .pricing-card .price { font-size: 2.4rem; font-weight: 800; }
-        .pricing-card .price span { font-size: 1rem; font-weight: 400; color: #888; }
-        .pricing-card .setup { font-size: 0.9rem; color: #888; margin: 0.3rem 0 1.2rem; }
-        .pricing-card ul { list-style: none; text-align: left; margin: 1rem 0 1.5rem; }
-        .pricing-card ul li { padding: 0.35rem 0; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
-        .pricing-card ul li::before { content: '✅'; }
-        .pricing-card .btn { width: 100%; }
-        .trust-bar { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem; }
-        .trust-item { text-align: center; }
-        .trust-item .num { font-size: 1.8rem; font-weight: 800; color: #2563eb; }
-        .trust-item .label { font-size: 0.85rem; color: #666; }
-        .faq-list { max-width: 700px; margin: 0 auto; }
-        .faq-item {
-            background: #fff;
-            border: 1px solid #eef0f5;
-            border-radius: 10px;
-            margin-bottom: 0.75rem;
-            padding: 1rem 1.25rem;
-            cursor: pointer;
+        .pricing-card.featured {
+            border-color: #c8a34e;
+            border-width: 2px;
+            position: relative;
         }
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px; left: 50%;
+            transform: translateX(-50%);
+            background: #c8a34e;
+            color: #1b1b2f;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .pricing-card .tier { font-size: 0.85rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+        .pricing-card .price { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; }
+        .pricing-card .price span { font-size: 0.95rem; font-weight: 400; color: #888; }
+        .pricing-card .setup { font-size: 0.85rem; color: #888; margin: 0.15rem 0 1.5rem; }
+        .pricing-card ul { list-style: none; margin: 1.5rem 0; }
+        .pricing-card ul li { padding: 0.4rem 0; font-size: 0.88rem; display: flex; align-items: center; gap: 0.6rem; color: #444; }
+        .pricing-card ul li::before { content: ''; display: inline-block; width: 5px; height: 5px; background: #c8a34e; border-radius: 50%; flex-shrink: 0; }
+        .pricing-card .btn { width: 100%; text-align: center; }
+
+        /* Trust */
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+        .trust-item .num { font-size: 2rem; font-weight: 800; color: #c8a34e; }
+        .trust-item .label { font-size: 0.85rem; color: #666; margin-top: 0.2rem; }
+
+        /* FAQ */
+        .faq-list { max-width: 720px; margin: 0 auto; }
+        .faq-item { border: 1px solid #e8e6e0; border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden; }
         .faq-item summary {
+            padding: 1.1rem 1.25rem;
             font-weight: 600;
-            font-size: 1rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 0.95rem;
+            background: #f8f7f4;
+            transition: background 0.2s;
         }
-        .faq-item summary::after {
-            content: '+';
-            font-size: 1.3rem;
-            color: #2563eb;
-        }
-        .faq-item[open] summary::after {
-            content: '−';
-        }
-        .faq-item p { padding-top: 0.75rem; font-size: 0.95rem; color: #555; line-height: 1.5; }
-        .contact-box {
-            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-            color: #fff;
+        .faq-item summary:hover { background: #f0eee8; }
+        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: #c8a34e; font-weight: 400; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item .answer { padding: 0 1.25rem 1.25rem; font-size: 0.9rem; color: #555; line-height: 1.6; }
+
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #1b1b2f 0%, #2a2a45 100%);
             border-radius: 16px;
-            padding: 3rem 2rem;
+            padding: 4rem 3rem;
             text-align: center;
         }
-        .contact-box h2 { margin-bottom: 0.3rem; }
-        .contact-box p { color: #a0b4d6; margin-bottom: 1.5rem; }
-        .contact-box .btn-primary { background: #fff; color: #1a1a2e; }
-        .contact-box .btn-primary:hover { background: #eef0f5; box-shadow: 0 4px 14px rgba(255,255,255,0.2); }
-        .contact-details { margin-top: 1.5rem; font-size: 0.95rem; color: #a0b4d6; }
-        footer { text-align: center; padding: 2rem 0; font-size: 0.85rem; color: #888; border-top: 1px solid #eef0f5; }
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .hero h1 { font-size: 2rem; }
-            .hero { padding: 3rem 0 2.5rem; }
-            .section { padding: 2.5rem 0; }
-            .pricing-card.popular { transform: none; }
+        .cta-box h2 { color: #ffffff; }
+        .cta-box p { color: rgba(255,255,255,0.6); font-size: 1rem; margin: 0.75rem 0 2rem; }
+        .cta-contact { margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+        .cta-contact strong { color: #c8a34e; }
+
+        /* Footer */
+        footer { padding: 3rem 0; border-top: 1px solid #e8e6e0; }
+        footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+        footer .brand p { font-size: 0.85rem; color: #888; margin-top: 0.5rem; max-width: 300px; line-height: 1.6; }
+        footer h5 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1b1b2f; margin-bottom: 1rem; }
+        footer a { display: block; font-size: 0.85rem; color: #666; text-decoration: none; padding: 0.25rem 0; }
+        footer a:hover { color: #c8a34e; }
+        footer .bottom { border-top: 1px solid #e8e6e0; margin-top: 2rem; padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: #888; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            h1 { font-size: 2rem; }
+            .hero .grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { max-width: none; }
+            .hero-mockup { display: none; }
+            .problems-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            footer .grid { grid-template-columns: 1fr; }
+            nav .nav-link { display: none; }
+            .section { padding: 3rem 0; }
+        }
+        @media (max-width: 600px) {
+            .steps { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Nav -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Auto<span>Effortless</span></a>
+            <div>
+                <a href="#how" class="nav-link">How It Works</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="btn-nav">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-emoji">⚡</div>
-            <h1>AutoEffortless</h1>
-            <p class="subtitle" style="font-size:1.3rem; font-weight:600; color:#fff;">Effortless Business Communication</p>
-            <p class="subtitle">A managed AI assistant for your WhatsApp and Instagram. We set it up, train it on your business, and monitor it 24/7. You focus on what you do best.</p>
-            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-primary">See Our Plans</a>
-                <a href="#contact" class="btn btn-secondary" style="border-color:#fff; color:#fff;">Get Started</a>
-            </div>
-            <div class="hero-badges">
-                <span>🇿🇦 Built for SA Businesses</span>
-                <span>📱 WhatsApp + Instagram</span>
-                <span>⏱️ Replies in 3 seconds</span>
-                <span>🕐 24/7 Operation</span>
+            <div class="grid">
+                <div>
+                    <div class="badge">South Africa — 2026</div>
+                    <h1>Your business never misses a lead.</h1>
+                    <p>We set up a managed AI assistant for your WhatsApp and Instagram that replies to customer enquiries instantly — 24/7. You focus on running your business.</p>
+                    <div class="buttons">
+                        <a href="#pricing" class="btn btn-primary">See Plans &amp; Pricing</a>
+                        <a href="#contact" class="btn btn-outline">Talk to Us</a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="num">&lt; 3s</div>
+                            <div class="label">Average reply time</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">24/7</div>
+                            <div class="label">Never sleeps</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">7 days</div>
+                            <div class="label">Setup to go-live</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="hero-mockup">
+                        <div class="chat-header">
+                            <div class="chat-avatar">C</div>
+                            <div>
+                                <div class="chat-name">Customer</div>
+                                <div class="chat-status">● Online</div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="msg in">Hi, I see you do home cleaning services. Do you have availability this weekend?</div>
+                            <div class="msg out">Good day! Yes, we have availability on Saturday morning and Sunday afternoon. Which would work better for you?</div>
+                            <div class="msg in">Saturday please. How much for a 3-bedroom house?</div>
+                            <div class="msg out">A full clean for a 3-bedroom is R450. That includes all rooms, kitchen, and bathrooms. Would you like to book a slot?</div>
+                            <div class="msg in">Yes please! Saturday 9 AM works</div>
+                            <div class="msg out" style="background:#1b1b2f; color:#fff;">✅ Saturday 9 AM booked. You'll receive a confirmation shortly. See you then!</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Problems -->
     <section class="section" style="padding-bottom:0;">
-        <div class="container" style="max-width:750px; text-align:center;">
-            <h2>Losing Leads While You Sleep?</h2>
-            <p style="font-size:1.1rem; color:#555; margin-bottom:1.5rem;">
-                A customer messages you at 9 PM on a Sunday. You see it Monday morning — they've already gone elsewhere.
-            </p>
-            <p style="color:#555;">
-                This happens to every business. The difference is, some now have an AI assistant that catches those leads instantly — 24/7, weekends, holidays. Effortlessly.
-            </p>
+        <div class="container">
+            <div class="section-title">
+                <span>The Problem</span>
+                <h2>If this sounds familiar, we can help</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>You lose leads while you sleep</h3>
+                    <p>A customer messages at 9 PM on a Sunday. You see it Monday morning — they've already gone to a competitor.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>You spend hours answering the same questions</h3>
+                    <p>"What are your hours?" "How much does it cost?" "Do you deliver?" Every day, the same answers. It eats into your time.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>You can't reply fast enough</h3>
+                    <p>Studies show that responding within 5 minutes increases conversion by 400%. But you're busy actually running your business.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- How it works -->
+    <section class="section" id="how">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <div class="section-title">
+                <span>How It Works</span>
+                <h2>We handle the tech. You handle the business.</h2>
+            </div>
             <div class="steps">
                 <div class="step-card">
                     <div class="num">1</div>
-                    <h4>We Set It Up</h4>
-                    <p>We connect your WhatsApp and Instagram, train the AI on your business — products, prices, hours, FAQs.</p>
+                    <h4>Discovery Call</h4>
+                    <p>We spend 30 minutes learning your business — your products, services, pricing, and common customer questions.</p>
                 </div>
                 <div class="step-card">
                     <div class="num">2</div>
-                    <h4>You Test It</h4>
-                    <p>You send test messages, see how it responds, tell us what to tweak. We don't go live until you're happy.</p>
+                    <h4>We Set It Up</h4>
+                    <p>We connect WhatsApp and Instagram, train the AI on your business, integrate your calendar. Takes about 5 days.</p>
                 </div>
                 <div class="step-card">
                     <div class="num">3</div>
-                    <h4>It Works 24/7</h4>
-                    <p>The AI handles customer enquiries instantly. Books appointments. Captures leads. Hands off to you when needed.</p>
+                    <h4>You Test It</h4>
+                    <p>You send messages to your own number and see how it responds. We tweak anything until you're happy.</p>
                 </div>
                 <div class="step-card">
                     <div class="num">4</div>
-                    <h4>Weekly Reports</h4>
-                    <p>Every Monday you get a simple report — conversations handled, leads captured, appointments booked, anything we need to fix.</p>
+                    <h4>We Monitor It</h4>
+                    <p>We watch every conversation. If something goes wrong, we catch it. You get a simple weekly report.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" style="background:#f4f6fb;">
+    <!-- Features -->
+    <section class="section" style="background:#f8f7f4;" id="features">
         <div class="container">
-            <h2 class="section-title">What You Get</h2>
+            <div class="section-title">
+                <span>What You Get</span>
+                <h2>A complete communication system</h2>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="icon">🤖</div>
                     <h4>24/7 AI Assistant</h4>
-                    <p>Answers customer messages instantly — even at 2 AM, weekends, and public holidays.</p>
+                    <p>Answers customer messages instantly — 2 AM, weekends, public holidays. Your business never stops responding.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">📱</div>
                     <h4>WhatsApp + Instagram</h4>
-                    <p>Works on both platforms. Wherever your customers message you, the AI is there.</p>
+                    <p>Works on both platforms. Wherever your customers message you, the AI is there to respond.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">📅</div>
                     <h4>Appointment Booking</h4>
-                    <p>Integrates with your calendar. Customers can book appointments through the chat.</p>
+                    <p>Connects to your calendar. Customers can check availability and book appointments through the chat.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">📊</div>
+                    <h4>Lead Capture</h4>
+                    <p>Every conversation captures contact details and qualifies leads. Nothing falls through the cracks.</p>
+                </div>
+                <div class="feature-card">
                     <h4>Weekly Reports</h4>
-                    <p>Simple one-page report every Monday. Know exactly what happened without checking logs.</p>
+                    <p>Every Monday you get a one-page report showing conversations handled, leads captured, and anything we need to fix.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">🔍</div>
-                    <h4>We Monitor Everything</h4>
-                    <p>We watch every conversation. If something goes wrong, we catch it and fix it — fast.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🤝</div>
                     <h4>Human Handoff</h4>
-                    <p>When the AI can't handle something, it hands off to you with full context. No lost information.</p>
+                    <p>When the AI can't handle something, it hands the conversation to you with full context. No repetition needed.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Pricing -->
     <section class="section" id="pricing">
         <div class="container">
-            <h2 class="section-title">Simple Pricing</h2>
-            <p style="text-align:center; color:#666; margin-bottom:2rem; font-size:0.95rem;">No lock-in contracts. Cancel anytime. Month-to-month.</p>
+            <div class="section-title">
+                <span>Pricing</span>
+                <h2>Simple, transparent, month-to-month</h2>
+            </div>
+            <p style="text-align:center; color:#888; margin-bottom:2.5rem; font-size:0.9rem;">No lock-in contracts. Cancel anytime.</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="tier">Starter</div>
-                    <div class="price">R3,000<span>/month</span></div>
-                    <div class="setup">+ R5,000 setup fee</div>
-                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem;">Best for solo businesses</p>
+                    <div class="price">R3,000<span>/mo</span></div>
+                    <div class="setup">R5,000 setup fee</div>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem;">Solo businesses</p>
                     <ul>
-                        <li>AI replies to WhatsApp messages</li>
-                        <li>Auto-reply to common questions</li>
+                        <li>AI replies to WhatsApp</li>
+                        <li>Auto-answer common questions</li>
                         <li>Lead capture</li>
                         <li>Weekly report</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
                 </div>
-                <div class="pricing-card popular">
+                <div class="pricing-card featured">
                     <div class="tier">Growth</div>
-                    <div class="price">R5,000<span>/month</span></div>
-                    <div class="setup">+ R7,000 setup fee</div>
-                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem; font-weight:600; color:#2563eb;">Most popular</p>
+                    <div class="price">R5,000<span>/mo</span></div>
+                    <div class="setup">R7,000 setup fee</div>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem;">Small teams</p>
                     <ul>
                         <li>Everything in Starter</li>
                         <li>Instagram DM integration</li>
@@ -314,67 +459,89 @@
                 </div>
                 <div class="pricing-card">
                     <div class="tier">Scale</div>
-                    <div class="price">R8,000<span>/month</span></div>
-                    <div class="setup">+ R12,000 setup fee</div>
-                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem;">Best for busy businesses</p>
+                    <div class="price">R8,000<span>/mo</span></div>
+                    <div class="setup">R12,000 setup fee</div>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:0.5rem;">Busy businesses</p>
                     <ul>
                         <li>Everything in Growth</li>
-                        <li>Advanced lead qualification</li>
-                        <li>Multi-agent support</li>
+                        <li>Advanced lead scoring</li>
+                        <li>Multi-user access</li>
                         <li>Custom integrations</li>
                         <li>Dedicated account manager</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" style="background:#f4f6fb;">
+    <!-- FAQ -->
+    <section class="section" style="background:#f8f7f4;">
         <div class="container">
-            <h2 class="section-title">Common Questions</h2>
+            <div class="section-title">
+                <span>Questions</span>
+                <h2>Common questions, answered</h2>
+            </div>
             <div class="faq-list">
                 <details class="faq-item">
                     <summary>How does it actually work?</summary>
-                    <p>We connect an AI assistant to your WhatsApp Business account. We train it on your business — what you sell, your hours, your pricing, common questions. When a customer messages, the AI responds automatically with accurate, helpful answers. It's like having a staff member who never sleeps.</p>
+                    <div class="answer">We connect an AI assistant to your WhatsApp Business account. We train it on your business — what you sell, your hours, your pricing, common questions. When a customer messages, the AI responds automatically with accurate answers. It's like having a staff member who never sleeps.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>What if it gives wrong information?</summary>
-                    <p>We monitor every conversation in real-time. If something goes wrong, we catch it and fix it — usually within minutes. You also get a weekly report with everything that happened, and the AI only answers questions we've trained it on. If something is out of scope, it hands off to you.</p>
+                    <summary>What if the AI gives wrong information?</summary>
+                    <div class="answer">We monitor every conversation in real-time. If something goes wrong, we catch it and fix it — usually within minutes. The AI only answers questions we've trained it on. If something is out of scope, it hands off to you.</div>
                 </details>
                 <details class="faq-item">
                     <summary>Will my customers know it's AI?</summary>
-                    <p>Some might guess, but most won't mind because they get an instant answer. If a customer asks, the AI can honestly respond that it's an assistant and offer to connect them to you. What matters is they get help immediately instead of waiting.</p>
+                    <div class="answer">Some might guess, but most won't care because they get an instant answer. If a customer asks, the AI can honestly respond that it's an assistant and offer to connect them to the owner. What matters is they get help immediately instead of waiting.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Can I stop anytime?</summary>
-                    <p>Yes. Month-to-month. No lock-in contracts. Just give us notice and we'll transition everything back to manual operation.</p>
+                    <summary>Can I cancel anytime?</summary>
+                    <div class="answer">Yes. Month-to-month. No lock-in contracts. Just give us notice and we'll transition everything back to manual operation.</div>
                 </details>
                 <details class="faq-item">
                     <summary>How long does setup take?</summary>
-                    <p>About 7 days. The WhatsApp approval takes a couple of days, then training and testing takes a few more. You're involved for a 30-minute discovery call and a 30-minute test session — then you're live.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>I don't understand AI. Can I still use this?</summary>
-                    <p>You don't need to understand how it works — that's our job. You just need to know it works. Your customers get faster replies, you get more leads, and we handle everything technical.</p>
+                    <div class="answer">About 7 days. The WhatsApp API approval takes a couple of days, then training and testing takes a few more. You're involved for a 30-minute discovery call and a 30-minute test session.</div>
                 </details>
             </div>
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="section" id="contact">
         <div class="container">
-            <div class="contact-box">
-                <h2>Ready to Make Your Business Effortless?</h2>
-                <p>Let's talk about your business. A 10-minute call is all we need to start.</p>
-                <p class="contact-details">📱 <strong>WhatsApp us</strong> or email: <strong>hello@autoeffortless.com</strong></p>
+            <div class="cta-box">
+                <h2>Ready to stop missing leads?</h2>
+                <p>A 10-minute call is all it takes to understand if this is right for your business.</p>
+                <p class="cta-contact">Email us at <strong>hello@autoeffortless.com</strong></p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2026 AutoEffortless. Built in South Africa. ⚡</p>
+            <div class="grid">
+                <div class="brand">
+                    <a href="/" class="logo" style="font-weight:700; font-size:1.1rem; text-decoration:none; color:#1b1b2f;">Auto<span style="color:#c8a34e;">Effortless</span></a>
+                    <p>South Africa's managed AI assistant service. We help businesses respond to customers instantly — every time, all the time.</p>
+                </div>
+                <div>
+                    <h5>Service</h5>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#features">Features</a>
+                    <a href="#how">How It Works</a>
+                </div>
+                <div>
+                    <h5>Contact</h5>
+                    <a href="mailto:hello@autoeffortless.com">hello@autoeffortless.com</a>
+                    <p style="font-size:0.85rem; color:#888; margin-top:0.25rem;">Richards Bay, South Africa</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>© 2026 AutoEffortless. All rights reserved.</span>
+                <span>Built in South Africa</span>
+            </div>
         </div>
     </footer>
 
