@@ -198,10 +198,36 @@
         .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(200,163,78,0.5); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; max-width: 720px; margin: 0 auto; }
-        .contact-card { text-align: center; padding: 2.4rem 2rem; text-decoration: none; }
+        .contact-card { text-align: center; padding: 2.4rem 2rem; }
+        button.contact-card { width: 100%; font-family: inherit; font-size: inherit; color: inherit; cursor: pointer; }
         .contact-card .iconbox { width: 54px; height: 54px; margin: 0 auto 1rem; border-radius: 16px; background: linear-gradient(135deg, var(--gold-soft), var(--gold-light)); display: flex; align-items: center; justify-content: center; color: var(--gold-deep); }
         .contact-card .iconbox .ic { width: 24px; height: 24px; }
         .contact-card p { font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
+
+        /* Contact modal */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(20,20,42,0.6); backdrop-filter: blur(6px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+        .modal-overlay.open { display: flex; }
+        .modal { background: var(--white); border-radius: 22px; max-width: 540px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.2rem 2.2rem 2rem; box-shadow: 0 30px 80px rgba(20,20,42,0.35); position: relative; }
+        .modal .mhead { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.4rem; }
+        .modal .mhead h3 { font-size: 1.45rem; }
+        .modal .mhead p { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
+        .modal .close { background: none; border: none; font-size: 1.6rem; line-height: 1; color: var(--muted); cursor: pointer; padding: 4px 8px; }
+        .modal .close:hover { color: var(--ink); }
+        .field { margin-bottom: 1.1rem; }
+        .field label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; }
+        .field input, .field select, .field textarea { width: 100%; padding: 0.8rem 1rem; border: 1.5px solid var(--line); border-radius: 12px; font-size: 0.95rem; font-family: inherit; color: var(--ink); background: var(--white); transition: border-color 0.2s; }
+        .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+        .cc-row { display: flex; gap: 0.6rem; }
+        .cc-row select { flex: 0 0 118px; }
+        .modal .btn { width: 100%; }
+        .form-msg { display: none; margin-top: 1rem; font-size: 0.88rem; font-weight: 600; }
+        .form-msg.ok { color: var(--green); }
+        .form-msg.err { color: var(--red); }
+        .form-success { display: none; text-align: center; padding: 1.4rem 0 0.6rem; }
+        .form-success .big { font-size: 2.4rem; margin-bottom: 0.8rem; }
+        .form-success h4 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .form-success p { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.3rem; }
+        .form-success .ref { display: inline-block; font-family: 'Courier New', monospace; font-weight: 800; color: var(--gold-deep); background: var(--gold-soft); border-radius: 10px; padding: 0.4rem 1rem; margin: 0.6rem 0 0.9rem; font-size: 1rem; letter-spacing: 0.04em; }
 
         /* Footer */
         footer { background: var(--ink); color: rgba(255,255,255,0.65); padding: 3.5rem 0 0; margin-top: 2rem; }
@@ -526,14 +552,95 @@
                     <h3>WhatsApp us</h3>
                     <p>Fastest way to reach us — tap to chat now.</p>
                 </a>
-                <a href="mailto:info@autoeffortless.com" class="card contact-card" onclick="window.AETrack && AETrack('contact-email')">
+                <button type="button" class="card contact-card" onclick="openContactModal()">
                     <div class="iconbox"><svg class="ic"><use href="#i-mail"/></svg></div>
                     <h3>Email us</h3>
-                    <p>info@autoeffortless.com — proposals and longer questions.</p>
-                </a>
+                    <p>Send a message — we reply within hours.</p>
+                </button>
             </div>
         </div>
     </section>
+
+    <!-- Contact modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal">
+            <div class="mhead">
+                <div>
+                    <h3>Send us a message</h3>
+                    <p>We'll get back to you within hours, 7 days a week.</p>
+                </div>
+                <button type="button" class="close" onclick="closeContactModal()" aria-label="Close">×</button>
+            </div>
+            <form id="contactForm" onsubmit="return submitContact(event)">
+                <div class="field">
+                    <label for="cf-need">What do you need?</label>
+                    <select id="cf-need" required>
+                        <option value="" disabled selected>Choose one…</option>
+                        <option>Custom App</option>
+                        <option>Website Design &amp; Deployment</option>
+                        <option>AI Email &amp; Calendar Syncing</option>
+                        <option>AI Booking System</option>
+                        <option>WhatsApp Assistant (add-on)</option>
+                        <option>Something else / Not sure</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="cf-desc">Tell us a bit more (optional)</label>
+                    <textarea id="cf-desc" rows="4" placeholder="A sentence or two about your business and what you're looking for…"></textarea>
+                </div>
+                <div class="field">
+                    <label for="cf-email">Your email</label>
+                    <input type="email" id="cf-email" required placeholder="you@yourbusiness.co.za" />
+                </div>
+                <div class="field">
+                    <label for="cf-phone">Your phone number</label>
+                    <div class="cc-row">
+                        <select id="cf-cc" aria-label="Country code">
+                            <option value="+27" selected>🇿🇦 +27</option>
+                            <option value="+44">🇬🇧 +44</option>
+                            <option value="+1">🇺🇸 +1</option>
+                            <option value="+61">🇦🇺 +61</option>
+                            <option value="+64">🇳🇿 +64</option>
+                            <option value="+353">🇮🇪 +353</option>
+                            <option value="+31">🇳🇱 +31</option>
+                            <option value="+49">🇩🇪 +49</option>
+                            <option value="+33">🇫🇷 +33</option>
+                            <option value="+34">🇪🇸 +34</option>
+                            <option value="+39">🇮🇹 +39</option>
+                            <option value="+351">🇵🇹 +351</option>
+                            <option value="+46">🇸🇪 +46</option>
+                            <option value="+47">🇳🇴 +47</option>
+                            <option value="+45">🇩🇰 +45</option>
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+971">🇦🇪 +971</option>
+                            <option value="+974">🇶🇦 +974</option>
+                            <option value="+966">🇸🇦 +966</option>
+                            <option value="+234">🇳🇬 +234</option>
+                            <option value="+254">🇰🇪 +254</option>
+                            <option value="+263">🇿🇼 +263</option>
+                            <option value="+260">🇿🇲 +260</option>
+                            <option value="+258">🇲🇿 +258</option>
+                            <option value="+65">🇸🇬 +65</option>
+                            <option value="+86">🇨🇳 +86</option>
+                            <option value="+81">🇯🇵 +81</option>
+                            <option value="+82">🇰🇷 +82</option>
+                        </select>
+                        <input type="tel" id="cf-phone" required placeholder="e.g. 061 527 4429" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-gold" id="cf-submit">Send Message</button>
+                <div class="form-msg" id="cf-msg"></div>
+            </form>
+            <div class="form-success" id="cf-success">
+                <div class="big">✅</div>
+                <h4>Thanks — your message is in!</h4>
+                <p>Your reference code:</p>
+                <span class="ref" id="cf-ref"></span>
+                <p>We've emailed you a copy. We'll get back to you within hours.</p>
+                <p style="margin-top:0.8rem;">Prefer to chat now? <a href="https://wa.me/27615274429" style="color:var(--gold-deep);font-weight:700;">WhatsApp us →</a></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -572,6 +679,47 @@
     </footer>
 
     <script>
+        // Contact modal
+        function openContactModal() { document.getElementById('contactModal').classList.add('open'); window.AETrack && AETrack('contact-modal-open'); }
+        function closeContactModal() { document.getElementById('contactModal').classList.remove('open'); }
+        document.getElementById('contactModal').addEventListener('click', function (e) { if (e.target === this) closeContactModal(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeContactModal(); });
+
+        function submitContact(e) {
+            e.preventDefault();
+            var need = document.getElementById('cf-need').value;
+            var desc = document.getElementById('cf-desc').value;
+            var email = document.getElementById('cf-email').value;
+            var phone = document.getElementById('cf-phone').value;
+            var cc = document.getElementById('cf-cc').value;
+            var btn = document.getElementById('cf-submit');
+            var msg = document.getElementById('cf-msg');
+            msg.className = 'form-msg'; msg.style.display = 'none';
+            btn.disabled = true; btn.textContent = 'Sending…';
+            fetch('https://app.autoeffortless.com/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ need: need, description: desc, email: email, phone: phone, countryCode: cc })
+            }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+              .then(function (res) {
+                  btn.disabled = false; btn.textContent = 'Send Message';
+                  if (res.ok && res.d.ok) {
+                      document.getElementById('cf-ref').textContent = res.d.refCode;
+                      document.getElementById('contactForm').style.display = 'none';
+                      document.getElementById('cf-success').style.display = 'block';
+                      window.AETrack && AETrack('contact-submit');
+                  } else {
+                      msg.className = 'form-msg err'; msg.style.display = 'block';
+                      msg.textContent = (res.d && res.d.error) ? res.d.error : 'Something went wrong. Please try again.';
+                  }
+              }).catch(function () {
+                  btn.disabled = false; btn.textContent = 'Send Message';
+                  msg.className = 'form-msg err'; msg.style.display = 'block';
+                  msg.textContent = 'Network error — please check your connection and try again.';
+              });
+            return false;
+        }
+
         (function () {
             var els = document.querySelectorAll('.reveal');
             if (!('IntersectionObserver' in window)) {
