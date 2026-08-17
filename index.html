@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AutoEffortless — Effortless Business Communication</title>
-    <meta name="description" content="We set up AI assistants for South African businesses — answering customers instantly on WhatsApp, Instagram, email, and your website. Answer questions, take orders, send payment links, book appointments, and follow up on leads. No tech skills needed." />
-    <meta property="og:title" content="AutoEffortless — Effortless Business Communication" />
-    <meta property="og:description" content="We set up AI assistants for South African businesses — answering customers instantly on WhatsApp, Instagram, email, and your website. No tech skills needed." />
+    <title>AutoEffortless — AI, Built &amp; Managed For Your Business</title>
+    <meta name="description" content="AutoEffortless designs and deploys AI for South African businesses — apps, websites, AI email & calendar syncing, and AI booking systems. Built for you, managed for you. No tech skills needed." />
+    <meta property="og:title" content="AutoEffortless — AI, Built &amp; Managed For Your Business" />
+    <meta property="og:description" content="We design and deploy AI for your business — apps, websites, AI email & calendar syncing, and AI booking systems. Built for you, managed for you." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://autoeffortless.com/" />
     <meta property="og:image" content="https://autoeffortless.com/og-image.png" />
@@ -44,18 +44,17 @@
     </script>
     <style>
         :root {
-            --ink: #17172e;
-            --ink-2: #3a3a55;
+            --ink: #14142a;
+            --ink-2: #35354f;
             --gold: #c8a34e;
             --gold-deep: #a8863a;
-            --gold-light: #e8d9ae;
+            --gold-light: #e9d9ae;
             --gold-soft: #fbf6ea;
             --cream: #faf8f3;
             --white: #ffffff;
-            --muted: #6c6c84;
+            --muted: #6b6b82;
             --line: #ece9df;
             --green: #2fae62;
-            --red: #e05d5d;
             --radius: 18px;
             --shadow: 0 18px 50px rgba(23, 23, 46, 0.10);
             --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -63,25 +62,26 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { font-family: var(--font); color: var(--ink); line-height: 1.65; background: var(--white); -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
         h1, h2, h3 { line-height: 1.15; font-weight: 800; letter-spacing: -0.025em; }
-        h1 { font-size: clamp(2.4rem, 5.2vw, 3.6rem); }
+        h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); }
         h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
         a { color: inherit; }
-        .section { padding: 5rem 0; }
+        .section { padding: 5.2rem 0; }
         .cream { background: var(--cream); }
         .eyebrow { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.76rem; font-weight: 700; color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.12em; background: var(--gold-soft); border: 1px solid rgba(200,163,78,0.25); padding: 0.4rem 1rem; border-radius: 30px; margin-bottom: 1.1rem; }
         .section-head { max-width: 700px; margin: 0 auto 3.2rem; text-align: center; }
         .section-head p { color: var(--muted); font-size: 1.05rem; margin-top: 0.8rem; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 2.1rem; border-radius: 14px; font-weight: 700; font-size: 0.95rem; text-decoration: none; cursor: pointer; border: none; font-family: inherit; transition: transform 0.18s, box-shadow 0.18s, background 0.18s; }
         .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); color: #fff; box-shadow: 0 10px 26px rgba(168, 134, 58, 0.32); }
-        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(168, 134, 58, 0.4); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(168, 134, 58, 0.42); }
         .btn-dark { background: var(--ink); color: #fff; }
         .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(23, 23, 46, 0.25); }
         .btn-ghost { background: transparent; color: var(--ink); border: 2px solid var(--line); }
         .btn-ghost:hover { border-color: var(--gold); color: var(--gold-deep); transform: translateY(-2px); }
+        .ic { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 
-        /* Nav — light */
+        /* Nav */
         nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
         nav .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
         nav .logo { font-weight: 900; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
@@ -94,82 +94,77 @@
         nav .btn-nav:hover { background: var(--gold-deep); transform: translateY(-1px); }
         @media (max-width: 900px) { nav .links { display: none; } }
 
-        /* Hero — light, centered */
-        .hero { padding: 6rem 0 3.5rem; text-align: center; background: radial-gradient(900px 420px at 50% -10%, rgba(200,163,78,0.16), transparent 65%); overflow: hidden; }
+        /* Hero */
+        .hero { padding: 5.5rem 0 4rem; position: relative; overflow: hidden; background: radial-gradient(1000px 500px at 85% -20%, rgba(200,163,78,0.14), transparent 60%), var(--white); }
+        .hero .grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3.5rem; align-items: center; }
         .hero .badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); border: 1px solid var(--line); box-shadow: 0 4px 16px rgba(23,23,46,0.06); padding: 0.5rem 1.1rem; border-radius: 30px; font-size: 0.8rem; font-weight: 600; color: var(--ink-2); margin-bottom: 1.6rem; }
         .hero .badge .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
         @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(47,174,98,0.4); } 50% { box-shadow: 0 0 0 6px rgba(47,174,98,0); } }
-        .hero h1 { max-width: 820px; margin: 0 auto 1.2rem; }
+        .hero h1 { margin-bottom: 1.2rem; }
         .hero h1 .accent { color: var(--gold-deep); }
-        .hero .lead { max-width: 600px; margin: 0 auto 2rem; color: var(--muted); font-size: 1.12rem; line-height: 1.75; }
-        .hero .buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.8rem; }
-        .hero .chips { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+        .hero .lead { max-width: 560px; color: var(--muted); font-size: 1.12rem; line-height: 1.75; margin-bottom: 2rem; }
+        .hero .buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
+        .hero .chips { display: flex; gap: 0.6rem; flex-wrap: wrap; }
         .hero .chips span { font-size: 0.78rem; color: var(--muted); background: var(--white); border: 1px solid var(--line); padding: 0.4rem 0.9rem; border-radius: 20px; }
 
-        /* Product mockup — browser frame */
-        .browser { margin: 3.5rem auto 0; max-width: 980px; background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; text-align: left; }
-        .browser .bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.1rem; background: var(--cream); border-bottom: 1px solid var(--line); }
-        .browser .bar .dot { width: 11px; height: 11px; border-radius: 50%; }
-        .browser .bar .d1 { background: #ff5f57; } .browser .bar .d2 { background: #febc2e; } .browser .bar .d3 { background: #28c840; }
-        .browser .bar .url { margin-left: 0.8rem; font-size: 0.75rem; color: var(--muted); background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 0.3rem 0.9rem; flex: 1; max-width: 380px; }
-        .app { display: grid; grid-template-columns: 210px 1fr 300px; min-height: 430px; }
-        .app .side { background: var(--ink); color: rgba(255,255,255,0.65); padding: 1.4rem 1.1rem; font-size: 0.78rem; }
-        .app .side .brand { font-weight: 800; font-size: 0.95rem; color: #fff; margin-bottom: 1.4rem; }
-        .app .side .brand span { color: var(--gold); }
-        .app .side .item { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.6rem; border-radius: 9px; margin-bottom: 0.2rem; }
-        .app .side .item.on { background: rgba(200,163,78,0.18); color: var(--gold-light); }
-        .app .chatcol { border-right: 1px solid var(--line); }
-        .app .chatcol .head { padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--line); font-size: 0.82rem; font-weight: 700; }
-        .app .chatcol .conv { display: flex; align-items: center; gap: 0.7rem; padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--line); }
-        .app .chatcol .conv.active { background: var(--gold-soft); }
-        .app .chatcol .av { width: 34px; height: 34px; border-radius: 50%; background: var(--gold-light); color: var(--gold-deep); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0; }
-        .app .chatcol .nm { font-size: 0.8rem; font-weight: 600; line-height: 1.3; }
-        .app .chatcol .pr { font-size: 0.7rem; color: var(--muted); }
-        .app .chatcol .tag { margin-left: auto; font-size: 0.62rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 10px; background: var(--gold-soft); color: var(--gold-deep); }
-        .app .chatcol .tag.green { background: #e6f5ec; color: var(--green); }
-        .app .main { padding: 1.2rem 1.2rem 0.6rem; display: flex; flex-direction: column; }
-        .app .main .thead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-        .app .main .thead .t { font-size: 0.85rem; font-weight: 700; }
-        .app .main .thead .ai { font-size: 0.65rem; font-weight: 700; color: var(--green); background: #e6f5ec; padding: 0.25rem 0.6rem; border-radius: 12px; }
-        .app .main .msg { padding: 0.65rem 0.95rem; border-radius: 14px; font-size: 0.8rem; line-height: 1.5; max-width: 85%; margin-bottom: 0.6rem; }
-        .app .main .msg.in { background: var(--cream); align-self: flex-start; border-bottom-left-radius: 4px; }
-        .app .main .msg.out { background: var(--gold); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
-        .app .main .msg.card { align-self: flex-end; background: var(--white); border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(23,23,46,0.08); width: 240px; }
-        .app .main .msg.card .ct { font-weight: 700; font-size: 0.8rem; margin-bottom: 0.3rem; }
-        .app .main .msg.card .cp { font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; }
-        .app .main .msg.card .cb { background: var(--ink); color: #fff; text-align: center; padding: 0.5rem; border-radius: 10px; font-size: 0.72rem; font-weight: 700; }
-        @media (max-width: 980px) { .app { grid-template-columns: 1fr; } .app .side { display: none; } .app .chatcol { display: none; } }
+        /* Agent visual */
+        .agent { position: relative; display: flex; justify-content: center; }
+        .agent .ring { position: absolute; inset: 6% -4%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 40%, rgba(200,163,78,0.25) 50%, transparent 60% 100%); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); animation: spin 14s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .agent .ring2 { position: absolute; inset: -2% 8%; border-radius: 50%; border: 1px dashed rgba(200,163,78,0.35); animation: spin 26s linear infinite reverse; }
+        .agent .photo { position: relative; width: min(420px, 100%); aspect-ratio: 4/5; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+        .agent .photo img { width: 100%; height: 100%; object-fit: cover; }
+        .agent .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(200deg, rgba(20,20,42,0.05) 20%, rgba(20,20,42,0.55) 100%); }
+        .agent .pill { position: absolute; display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border: 1px solid var(--line); border-radius: 14px; padding: 0.7rem 1rem; font-size: 0.8rem; font-weight: 700; color: var(--ink); box-shadow: 0 12px 30px rgba(23,23,46,0.18); animation: floaty 5s ease-in-out infinite; }
+        .agent .pill .ic { color: var(--gold-deep); }
+        .agent .p1 { top: 4%; left: -6%; animation-delay: 0s; }
+        .agent .p2 { top: 34%; right: -8%; animation-delay: 1.2s; }
+        .agent .p3 { bottom: 24%; left: -10%; animation-delay: 2.1s; }
+        .agent .p4 { bottom: 2%; right: -4%; animation-delay: 0.6s; }
+        @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+        .agent .online { position: absolute; top: 8%; right: 6%; display: flex; align-items: center; gap: 0.4rem; background: rgba(20,20,42,0.85); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.45rem 0.9rem; border-radius: 30px; z-index: 2; }
+        .agent .online .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+        @media (max-width: 980px) { .hero .grid { grid-template-columns: 1fr; } .agent { margin-top: 2.5rem; } .agent .p1 { left: 0; } .agent .p2 { right: 0; } .agent .p3 { left: 0; } .agent .p4 { right: 0; } }
 
-        /* Bento features */
-        .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
-        .bento .cell { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
-        .bento .cell:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(200,163,78,0.5); }
-        .bento .cell.wide { grid-column: span 3; }
-        .bento .cell.norm { grid-column: span 2; }
-        .bento .cell .ico { width: 46px; height: 46px; border-radius: 13px; background: var(--gold-soft); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 1rem; }
-        .bento .cell h3 { font-size: 1.08rem; margin-bottom: 0.4rem; }
-        .bento .cell p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-        @media (max-width: 900px) { .bento .cell.wide, .bento .cell.norm { grid-column: span 6; } }
+        /* Services */
+        .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+        .svc { background: var(--white); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+        .svc:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: rgba(200,163,78,0.5); }
+        .svc .imgwrap { position: relative; height: 210px; overflow: hidden; }
+        .svc .imgwrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .svc:hover .imgwrap img { transform: scale(1.05); }
+        .svc .imgwrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(20,20,42,0.55)); }
+        .svc .body { padding: 1.6rem 1.7rem 1.8rem; }
+        .svc .body .icrow { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.9rem; }
+        .svc .body .iconbox { width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, var(--gold-soft), var(--gold-light)); display: flex; align-items: center; justify-content: center; color: var(--gold-deep); }
+        .svc .body .iconbox .ic { width: 22px; height: 22px; }
+        .svc .body .arrow { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--ink); transition: all 0.2s; }
+        .svc:hover .body .arrow { background: var(--ink); color: #fff; border-color: var(--ink); }
+        .svc .body h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+        .svc .body p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+        .svc .body .tag { display: inline-block; margin-top: 0.9rem; font-size: 0.7rem; font-weight: 700; color: var(--gold-deep); background: var(--gold-soft); padding: 0.3rem 0.8rem; border-radius: 20px; }
+        .svc.addon { border-style: dashed; }
+        @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
 
         /* Steps */
         .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-        .step { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.4rem; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+        .step { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.4rem; transition: transform 0.2s, box-shadow 0.2s; }
         .step:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
         .step .n { font-size: 0.72rem; font-weight: 800; color: var(--gold-deep); letter-spacing: 0.1em; margin-bottom: 0.8rem; }
         .step h4 { font-size: 1rem; margin-bottom: 0.35rem; }
         .step p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
         @media (max-width: 900px) { .steps { grid-template-columns: 1fr; } }
 
-        /* Journey — dark band */
-        .journey { background: radial-gradient(800px 400px at 90% -10%, rgba(200,163,78,0.16), transparent 60%), var(--ink); color: #fff; }
-        .journey .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-        .journey .jcard { border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius); padding: 1.9rem; background: rgba(255,255,255,0.03); transition: transform 0.2s, border-color 0.2s; }
-        .journey .jcard:hover { transform: translateY(-4px); border-color: rgba(200,163,78,0.5); }
-        .journey .jcard .k { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; }
-        .journey .jcard .ico { font-size: 1.7rem; margin-bottom: 0.8rem; }
-        .journey .jcard h3 { font-size: 1.1rem; margin-bottom: 0.45rem; }
-        .journey .jcard p { font-size: 0.87rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
-        @media (max-width: 900px) { .journey .grid { grid-template-columns: 1fr; } }
+        /* Features (dark band) */
+        .feat { background: radial-gradient(900px 420px at 90% -10%, rgba(200,163,78,0.16), transparent 60%), var(--ink); color: #fff; }
+        .feat .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+        .feat .fcard { border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius); padding: 1.9rem; background: rgba(255,255,255,0.03); transition: transform 0.2s, border-color 0.2s; }
+        .feat .fcard:hover { transform: translateY(-4px); border-color: rgba(200,163,78,0.5); }
+        .feat .fcard .iconbox { width: 46px; height: 46px; border-radius: 13px; background: rgba(200,163,78,0.16); color: var(--gold-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .feat .fcard .iconbox .ic { width: 22px; height: 22px; }
+        .feat .fcard h3 { font-size: 1.08rem; margin-bottom: 0.45rem; }
+        .feat .fcard p { font-size: 0.87rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        @media (max-width: 900px) { .feat .grid { grid-template-columns: 1fr; } }
 
         /* Integrations */
         .pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
@@ -185,7 +180,7 @@
         .pricing-card .d { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
         .pricing-card ul { list-style: none; display: grid; gap: 0.7rem; margin-bottom: 1.9rem; }
         .pricing-card ul li { font-size: 0.92rem; display: flex; gap: 0.7rem; align-items: flex-start; }
-        .pricing-card ul li::before { content: '✓'; color: var(--gold-deep); font-weight: 800; }
+        .pricing-card ul li .ic { color: var(--gold-deep); margin-top: 0.2em; }
         .pricing-card .btn { width: 100%; }
 
         /* FAQ */
@@ -202,8 +197,9 @@
         .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(200,163,78,0.5); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; max-width: 720px; margin: 0 auto; }
-        .contact-card { text-align: center; padding: 2.4rem 2rem; }
-        .contact-card .ico { font-size: 2rem; margin-bottom: 0.8rem; }
+        .contact-card { text-align: center; padding: 2.4rem 2rem; text-decoration: none; }
+        .contact-card .iconbox { width: 54px; height: 54px; margin: 0 auto 1rem; border-radius: 16px; background: linear-gradient(135deg, var(--gold-soft), var(--gold-light)); display: flex; align-items: center; justify-content: center; color: var(--gold-deep); }
+        .contact-card .iconbox .ic { width: 24px; height: 24px; }
         .contact-card p { font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
 
         /* Footer */
@@ -211,7 +207,7 @@
         footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 2.5rem; }
         footer .brand .logo { font-size: 1.25rem; font-weight: 900; color: #fff; text-decoration: none; }
         footer .brand .logo span { color: var(--gold); }
-        footer .brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-top: 0.8rem; max-width: 300px; line-height: 1.65; }
+        footer .brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-top: 0.8rem; max-width: 320px; line-height: 1.65; }
         footer h5 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; margin-bottom: 1rem; }
         footer a { display: block; font-size: 0.86rem; color: rgba(255,255,255,0.5); text-decoration: none; padding: 0.3rem 0; transition: color 0.2s; }
         footer a:hover { color: var(--gold-light); }
@@ -223,14 +219,34 @@
 </head>
 <body>
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+        <symbol id="i-calendar-check" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></symbol>
+        <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></symbol>
+        <symbol id="i-refresh" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+        <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+        <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><circle cx="12" cy="14" r="3"/><line x1="8" y1="4" x2="8" y2="8"/><line x1="16" y1="4" x2="16" y2="8"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+        <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    </svg>
+
     <!-- Nav -->
     <nav>
         <div class="container">
             <a href="/" class="logo">Auto<span>Effortless</span></a>
             <div class="links">
-                <a href="#product">The Product</a>
+                <a href="#services">Services</a>
                 <a href="#how">How It Works</a>
-                <a href="#features">Features</a>
+                <a href="#features">Capabilities</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
             </div>
@@ -244,117 +260,114 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="badge"><span class="pulse"></span> AI for any business — live in South Africa</div>
-            <h1>Your business never <span class="accent">misses a lead.</span></h1>
-            <p class="lead">We set up an AI assistant that replies to your customers instantly — on WhatsApp, Instagram, email, and your website. It answers questions, takes orders, books appointments, sends payment links, and follows up. You focus on running your business.</p>
-            <div class="buttons">
-                <a href="#contact" class="btn btn-gold" onclick="window.AETrack && AETrack('hero-demo')">Request a Demo →</a>
-                <a href="https://wa.me/27615274429" class="btn btn-ghost" onclick="window.AETrack && AETrack('hero-whatsapp')">Try it live on WhatsApp</a>
-            </div>
-            <div class="chips">
-                <span>Official WhatsApp API</span>
-                <span>POPIA compliant</span>
-                <span>CIPC registered</span>
-                <span>Made in South Africa</span>
-            </div>
-
-            <!-- Product mockup -->
-            <div class="browser">
-                <div class="bar">
-                    <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-                    <span class="url">app.autoeffortless.com — your business, online</span>
+            <div class="grid">
+                <div class="reveal visible">
+                    <div class="badge"><span class="pulse"></span> AI Tech Agency · South Africa</div>
+                    <h1>Your business, <span class="accent">powered by AI.</span></h1>
+                    <p class="lead">We design, build, and manage the AI your business needs — apps, websites, AI email &amp; calendar syncing, and AI booking systems. Done for you, from idea to launch, with no tech skills required.</p>
+                    <div class="buttons">
+                        <a href="#contact" class="btn btn-gold" onclick="window.AETrack && AETrack('hero-demo')">Request a Demo →</a>
+                        <a href="#services" class="btn btn-ghost">See What We Build</a>
+                    </div>
+                    <div class="chips">
+                        <span>Apps &amp; Websites</span>
+                        <span>AI Email &amp; Calendar</span>
+                        <span>AI Booking Systems</span>
+                        <span>POPIA compliant</span>
+                    </div>
                 </div>
-                <div class="app">
-                    <div class="side">
-                        <div class="brand">Auto<span>Effortless</span></div>
-                        <div class="item on">💬 Conversations</div>
-                        <div class="item">📊 Reports</div>
-                        <div class="item">📅 Bookings</div>
-                        <div class="item">🌐 Website</div>
-                        <div class="item">⚙️ Settings</div>
-                    </div>
-                    <div class="chatcol">
-                        <div class="head">Inbox</div>
-                        <div class="conv active">
-                            <div class="av">L</div>
-                            <div><div class="nm">Lindile M.</div><div class="pr">Booking confirmed · now</div></div>
-                            <span class="tag green">AI</span>
-                        </div>
-                        <div class="conv">
-                            <div class="av">T</div>
-                            <div><div class="nm">Thandi K.</div><div class="pr">Payment link sent · 2 min</div></div>
-                            <span class="tag">AI</span>
-                        </div>
-                        <div class="conv">
-                            <div class="av">R</div>
-                            <div><div class="nm">Riaan v.d.M.</div><div class="pr">Question answered · 9 min</div></div>
-                            <span class="tag green">AI</span>
-                        </div>
-                    </div>
-                    <div class="main">
-                        <div class="thead">
-                            <span class="t">Lindile M. — WhatsApp</span>
-                            <span class="ai">● Answered by AI</span>
-                        </div>
-                        <div class="msg in">Hi! Do you have availability for Saturday?</div>
-                        <div class="msg out">Good day! Yes — Saturday 9 AM and 11 AM are open. Which suits you?</div>
-                        <div class="msg in">9 AM please. What does it cost?</div>
-                        <div class="msg out">R450. Shall I book it for you?</div>
-                        <div class="msg in">Yes please! 😊</div>
-                        <div class="msg card">
-                            <div class="ct">Saturday 9:00 AM — Booked ✅</div>
-                            <div class="cp">Payment link sent for R450</div>
-                            <div class="cb">View payment link →</div>
-                        </div>
-                    </div>
+                <div class="agent reveal visible" style="transition-delay:0.15s;">
+                    <div class="ring"></div>
+                    <div class="ring2"></div>
+                    <div class="online"><span class="dot"></span>AGENT ONLINE</div>
+                    <div class="photo"><img src="/img/hero-ai.jpg" alt="AI agent" /></div>
+                    <div class="pill p1"><svg class="ic"><use href="#i-smartphone"/></svg> Deploy App</div>
+                    <div class="pill p2"><svg class="ic"><use href="#i-globe"/></svg> Deploy Website</div>
+                    <div class="pill p3"><svg class="ic"><use href="#i-mail"/></svg> Sync Email &amp; Calendar</div>
+                    <div class="pill p4"><svg class="ic"><use href="#i-calendar-check"/></svg> Automate Bookings</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product (bento) -->
-    <section class="section cream" id="product">
+    <!-- Services -->
+    <section class="section cream" id="services">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">What You Get</span>
-                <h2>Everything your customers need, answered for you</h2>
-                <p>One assistant across every channel — built, run, and monitored for you.</p>
+                <span class="eyebrow">What We Build</span>
+                <h2>AI, designed and deployed for you</h2>
+                <p>From idea to launch — we handle the design, the build, and the running of it.</p>
             </div>
-            <div class="bento">
-                <div class="cell wide reveal">
-                    <div class="ico">💬</div>
-                    <h3>Answers customer questions</h3>
-                    <p>Your hours, pricing, services, availability — answered instantly, 24/7, on WhatsApp, Instagram, email, and your website. The questions you answer a hundred times, answered once.</p>
+            <div class="svc-grid">
+                <div class="svc reveal">
+                    <div class="imgwrap"><img src="/img/apps.jpg" alt="Design and deploy apps" loading="lazy" /></div>
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-smartphone"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>Design &amp; Deploy Apps</h3>
+                        <p>Custom apps designed around how your business works — internal tools, customer apps, booking apps — built and deployed for you, then managed on autopilot.</p>
+                        <span class="tag">From concept to launch</span>
+                    </div>
                 </div>
-                <div class="cell norm reveal" style="transition-delay:0.05s;">
-                    <div class="ico">📅</div>
-                    <h3>Books appointments</h3>
-                    <p>Customers check availability and book straight into your calendar. No back-and-forth.</p>
+                <div class="svc reveal" style="transition-delay:0.08s;">
+                    <div class="imgwrap"><img src="/img/websites.jpg" alt="Design and deploy websites" loading="lazy" /></div>
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-globe"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>Design &amp; Deploy Websites</h3>
+                        <p>Modern websites designed and deployed for your business — with AI editing built in. Ask for changes in plain language and they're published for you.</p>
+                        <span class="tag">Hosted, secured, managed</span>
+                    </div>
                 </div>
-                <div class="cell norm reveal" style="transition-delay:0.1s;">
-                    <div class="ico">💰</div>
-                    <h3>Orders &amp; payment links</h3>
-                    <p>Orders captured in chat, payment links sent with the exact amount, invoices chased.</p>
+                <div class="svc reveal" style="transition-delay:0.16s;">
+                    <div class="imgwrap"><img src="/img/email-calendar.jpg" alt="AI email and calendar syncing" loading="lazy" /></div>
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-mail"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>AI Email &amp; Calendar Syncing</h3>
+                        <p>Your inbox and calendar working together automatically — AI triage, drafted replies, meeting scheduling, and follow-ups that never slip. You stay in control.</p>
+                        <span class="tag">Inbox on autopilot</span>
+                    </div>
                 </div>
-                <div class="cell norm reveal" style="transition-delay:0.05s;">
-                    <div class="ico">🔁</div>
-                    <h3>Follows up on leads</h3>
-                    <p>Quiet enquiries get a gentle nudge. No lead slips away, ever.</p>
+                <div class="svc reveal" style="transition-delay:0.24s;">
+                    <div class="imgwrap"><img src="/img/bookings.jpg" alt="AI booking systems" loading="lazy" /></div>
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-calendar-check"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>AI Booking Systems</h3>
+                        <p>Customers book straight into your calendar — via your website, email, or socials. Availability checked, slots confirmed, reminders sent. No double bookings.</p>
+                        <span class="tag">Sell time, on autopilot</span>
+                    </div>
                 </div>
-                <div class="cell norm reveal" style="transition-delay:0.1s;">
-                    <div class="ico">📊</div>
-                    <h3>Dashboard &amp; reports</h3>
-                    <p>See every conversation and a weekly summary of what came in and what closed.</p>
+                <div class="svc addon reveal">
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-message"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>WhatsApp Assistant</h3>
+                        <p>Still available — a simple AI assistant that answers routine customer questions on WhatsApp. Lower cost, on request. Ideal as a starter step.</p>
+                        <span class="tag">Add-on · on request</span>
+                    </div>
                 </div>
-                <div class="cell wide reveal" style="transition-delay:0.05s;">
-                    <div class="ico">🌐</div>
-                    <h3>Website hosting &amp; AI editing</h3>
-                    <p>We host and secure your website — and you can ask for changes in plain language. "Update our prices" and it's done. No tech skills, no waiting.</p>
-                </div>
-                <div class="cell wide reveal" style="transition-delay:0.1s;">
-                    <div class="ico">🛟</div>
-                    <h3>Human handoff, always</h3>
-                    <p>When a conversation needs a person, it's handed to you instantly with full context. The AI runs the routine; you take the important moments.</p>
+                <div class="svc addon reveal" style="transition-delay:0.08s;">
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-layers"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>Something custom?</h3>
+                        <p>If your business needs AI we haven't listed, tell us. We design solutions around problems — not the other way around.</p>
+                        <span class="tag">Tell us your idea</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -372,72 +385,66 @@
                 <div class="step reveal">
                     <div class="n">STEP 01</div>
                     <h4>Tell us about your business</h4>
-                    <p>30 minutes: what you do, your pricing, the questions customers ask most.</p>
+                    <p>30 minutes: what you do, your goals, and where AI can do the heavy lifting.</p>
                 </div>
                 <div class="step reveal" style="transition-delay:0.08s;">
                     <div class="n">STEP 02</div>
-                    <h4>We build your assistant</h4>
-                    <p>We connect your channels and train it on your business. About 5 days. You do nothing.</p>
+                    <h4>We design &amp; build it</h4>
+                    <p>We design, build, and deploy your app, website, or system. About a week for most projects. You do nothing.</p>
                 </div>
                 <div class="step reveal" style="transition-delay:0.16s;">
                     <div class="n">STEP 03</div>
                     <h4>You test it yourself</h4>
-                    <p>Message your own number. See how it replies. We go live only when you're happy.</p>
+                    <p>See it working with your own eyes. We go live only when you're happy.</p>
                 </div>
                 <div class="step reveal" style="transition-delay:0.24s;">
                     <div class="n">STEP 04</div>
                     <h4>We run it for you</h4>
-                    <p>Monitored around the clock, fixed when needed, weekly summary to your inbox.</p>
+                    <p>Monitored, maintained, and improved. Ask for changes in plain language — we make them.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey -->
-    <section class="section journey">
+    <!-- Capabilities (dark band) -->
+    <section class="section feat" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">The Customer Journey</span>
-                <h2>From first message to repeat customer</h2>
-                <p style="color:rgba(255,255,255,0.55);">Every conversation handled, across every channel.</p>
+                <span class="eyebrow">Capabilities</span>
+                <h2>What our AI does for you</h2>
+                <p style="color:rgba(255,255,255,0.55);">Under the hood, everything is built to save you time and never drop the ball.</p>
             </div>
             <div class="grid">
-                <div class="jcard reveal">
-                    <div class="k">Step 1 · Answer</div>
-                    <div class="ico">⚡</div>
-                    <h3>Never leave them waiting</h3>
-                    <p>Instant, accurate replies — day or night, weekends included, on every channel your customers use.</p>
+                <div class="fcard reveal">
+                    <div class="iconbox"><svg class="ic"><use href="#i-zap"/></svg></div>
+                    <h3>Automation that runs quietly</h3>
+                    <p>Repetitive work — enquiries, scheduling, follow-ups, data entry — handled automatically, so you focus on the work only you can do.</p>
                 </div>
-                <div class="jcard reveal" style="transition-delay:0.1s;">
-                    <div class="k">Step 2 · Book &amp; Sell</div>
-                    <div class="ico">💰</div>
-                    <h3>Turn chats into business</h3>
-                    <p>Appointments booked, orders captured, payment links sent with the exact amount — the whole sale in the chat.</p>
+                <div class="fcard reveal" style="transition-delay:0.08s;">
+                    <div class="iconbox"><svg class="ic"><use href="#i-refresh"/></svg></div>
+                    <h3>Everything stays in sync</h3>
+                    <p>Email, calendar, website, and systems connected — when something changes in one place, it's reflected everywhere.</p>
                 </div>
-                <div class="jcard reveal" style="transition-delay:0.2s;">
-                    <div class="k">Step 3 · Follow up &amp; Grow</div>
-                    <div class="ico">📈</div>
-                    <h3>No lead slips away</h3>
-                    <p>Quiet enquiries followed up, happy customers asked for reviews, and a clear view of what's working.</p>
+                <div class="fcard reveal" style="transition-delay:0.16s;">
+                    <div class="iconbox"><svg class="ic"><use href="#i-chart"/></svg></div>
+                    <h3>Clear reporting</h3>
+                    <p>A simple weekly summary of what happened and what's next. No jargon, no guessing.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integrations -->
-    <section class="section" style="padding:3.5rem 0;">
-        <div class="container">
-            <div class="section-head reveal" style="margin-bottom:2rem;">
-                <span class="eyebrow">Works With</span>
-                <h2>Your channels, connected</h2>
-            </div>
-            <div class="pills reveal">
-                <span class="pill"><span class="dot"></span>WhatsApp</span>
-                <span class="pill"><span class="dot"></span>Instagram</span>
-                <span class="pill"><span class="dot"></span>Email</span>
-                <span class="pill"><span class="dot"></span>Your Website</span>
-                <span class="pill"><span class="dot"></span>Google Calendar</span>
-                <span class="pill"><span class="dot"></span>Payment Links</span>
+                <div class="fcard reveal">
+                    <div class="iconbox"><svg class="ic"><use href="#i-shield"/></svg></div>
+                    <h3>Secure &amp; compliant</h3>
+                    <p>POPIA compliant, data stored securely, never shared or sold. Your information stays yours.</p>
+                </div>
+                <div class="fcard reveal" style="transition-delay:0.08s;">
+                    <div class="iconbox"><svg class="ic"><use href="#i-message"/></svg></div>
+                    <h3>Human when it matters</h3>
+                    <p>AI handles the routine. When a conversation needs a person, it reaches you instantly — with full context.</p>
+                </div>
+                <div class="fcard reveal" style="transition-delay:0.16s;">
+                    <div class="iconbox"><svg class="ic"><use href="#i-rocket"/></svg></div>
+                    <h3>Improves over time</h3>
+                    <p>We watch how it performs and make it better — your systems get sharper every month, without you lifting a finger.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -453,14 +460,14 @@
             <div class="pricing-wrap reveal">
                 <div class="pricing-card">
                     <div class="k">What's Included</div>
-                    <h3>Your assistant, fully managed</h3>
-                    <p class="d">No lock-in contracts. Cancel anytime. You tell us what you need — we build it and run it.</p>
+                    <h3>Your AI, fully managed</h3>
+                    <p class="d">Project-based engagements, no lock-in contracts. You tell us what you need — we design, build, and run it.</p>
                     <ul>
-                        <li>Setup and WhatsApp approval handled for you</li>
-                        <li>Trained on your business, your pricing, your answers</li>
-                        <li>Monitored around the clock, with human handoff</li>
-                        <li>Weekly summary of conversations and leads</li>
-                        <li>Changes made for you — just ask</li>
+                        <li><svg class="ic" style="width:16px;height:16px;"><use href="#i-check"/></svg>Design and build included — from idea to launch</li>
+                        <li><svg class="ic" style="width:16px;height:16px;"><use href="#i-check"/></svg>Hosted, secured, and monitored for you</li>
+                        <li><svg class="ic" style="width:16px;height:16px;"><use href="#i-check"/></svg>Changes made for you — just ask</li>
+                        <li><svg class="ic" style="width:16px;height:16px;"><use href="#i-check"/></svg>Weekly summary of what's happening</li>
+                        <li><svg class="ic" style="width:16px;height:16px;"><use href="#i-check"/></svg>WhatsApp assistant add-on available at lower cost</li>
                     </ul>
                     <a href="#contact" class="btn btn-gold" onclick="window.AETrack && AETrack('pricing-cta')">Request a Quote →</a>
                 </div>
@@ -477,28 +484,28 @@
             </div>
             <div class="faq-list reveal">
                 <details class="faq-item">
-                    <summary>How does it actually work?</summary>
-                    <div class="answer">We connect an AI assistant to your business accounts — WhatsApp, Instagram, email, and your website. We train it on your business: what you sell, your hours, your pricing, the questions customers ask most. When a customer reaches out, the AI responds automatically with accurate answers. It's like having a staff member who never sleeps.</div>
+                    <summary>What exactly does AutoEffortless do?</summary>
+                    <div class="answer">We design and deploy AI for businesses: custom apps, websites, AI email &amp; calendar syncing, and AI booking systems. We handle the whole journey — design, build, launch, and ongoing management — so you get working AI without needing any technical skills.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need any technical skills?</summary>
+                    <div class="answer">No. That's the point. You tell us what you need in plain language — we design, build, and run it. Want a change? Just ask, in plain language, and we make it.</div>
                 </details>
                 <details class="faq-item">
                     <summary>What kinds of businesses does this work for?</summary>
-                    <div class="answer">All kinds. Schools, churches, shops, salons, restaurants, clinics, builders, consultants — if you talk to customers, we can help you answer them faster. We build each assistant around your specific business, so it fits any industry.</div>
+                    <div class="answer">All kinds — shops, salons, restaurants, clinics, schools, churches, builders, consultants, lodges. If your business has customers, paperwork, or bookings, there's an AI system that helps — and we build it around how you actually work.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>What if the AI gives wrong information?</summary>
-                    <div class="answer">We monitor every conversation in real-time. If something goes wrong, we catch it and fix it — usually within minutes. The AI only answers questions we've trained it on. If something is out of scope, it hands off to you.</div>
+                    <summary>Do you still do WhatsApp assistants?</summary>
+                    <div class="answer">Yes — on request, at a lower cost. It's a good starter step: an AI assistant that answers routine customer questions on WhatsApp. Many clients start there, then grow into apps, websites, and full systems.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Will my customers know it's AI?</summary>
-                    <div class="answer">Some might guess, but most won't care because they get an instant answer. If a customer asks, the AI can honestly respond that it's an assistant and offer to connect them to you. What matters is they get help immediately instead of waiting.</div>
+                    <summary>Is my data safe?</summary>
+                    <div class="answer">Yes. We're POPIA compliant — your data and your customers' information are stored securely and never shared or sold. We can share our POPIA documentation on request.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Is my customer data safe?</summary>
-                    <div class="answer">Yes. We're POPIA compliant — customer conversations are treated as personal information, stored securely, and never shared or sold. We can share our POPIA documentation with you on request.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>How long does setup take?</summary>
-                    <div class="answer">About 7 days. The WhatsApp API approval takes a couple of days, then training and testing takes a few more. You're involved for a 30-minute discovery call and a 30-minute test session.</div>
+                    <summary>How long does a project take?</summary>
+                    <div class="answer">Most projects go from kickoff to launch in about a week — a 30-minute discovery call, design and build, then you test it before we go live. Larger systems take longer, and we'll give you a timeline up front.</div>
                 </details>
             </div>
         </div>
@@ -513,13 +520,13 @@
                 <p>We'll get back to you within hours, 7 days a week.</p>
             </div>
             <div class="contact-grid reveal">
-                <a href="https://wa.me/27615274429" class="contact-card card" style="text-decoration:none;" onclick="window.AETrack && AETrack('contact-whatsapp')">
-                    <div class="ico">📱</div>
+                <a href="https://wa.me/27615274429" class="card contact-card" onclick="window.AETrack && AETrack('contact-whatsapp')">
+                    <div class="iconbox"><svg class="ic"><use href="#i-phone"/></svg></div>
                     <h3>WhatsApp us</h3>
                     <p>Fastest way to reach us — tap to chat now.</p>
                 </a>
-                <a href="mailto:info@autoeffortless.com" class="contact-card card" style="text-decoration:none;" onclick="window.AETrack && AETrack('contact-email')">
-                    <div class="ico">✉️</div>
+                <a href="mailto:info@autoeffortless.com" class="card contact-card" onclick="window.AETrack && AETrack('contact-email')">
+                    <div class="iconbox"><svg class="ic"><use href="#i-mail"/></svg></div>
                     <h3>Email us</h3>
                     <p>info@autoeffortless.com — proposals and longer questions.</p>
                 </a>
@@ -533,14 +540,14 @@
             <div class="grid">
                 <div class="brand">
                     <a href="/" class="logo">Auto<span>Effortless</span></a>
-                    <p>We help South African businesses respond to customers instantly — on WhatsApp, Instagram, email, and their website. Answer questions, send invoices, book appointments, and follow up on leads.</p>
+                    <p>We design, build, and manage AI for South African businesses — apps, websites, AI email &amp; calendar syncing, and AI booking systems. Built for you, managed for you.</p>
                 </div>
                 <div>
-                    <h5>Product</h5>
-                    <a href="#product">The Product</a>
-                    <a href="#how">How It Works</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#faq">FAQ</a>
+                    <h5>Services</h5>
+                    <a href="#services">Apps</a>
+                    <a href="#services">Websites</a>
+                    <a href="#services">AI Email &amp; Calendar</a>
+                    <a href="#services">AI Bookings</a>
                 </div>
                 <div>
                     <h5>Company</h5>
@@ -558,7 +565,7 @@
             </div>
             <div class="bottom">
                 <span>© 2026 AutoEffortless. All rights reserved.</span>
-                <span>Effortless Business Communication · Built in South Africa 🇿🇦</span>
+                <span>AI, Built &amp; Managed · Made in South Africa 🇿🇦</span>
             </div>
         </div>
     </footer>
