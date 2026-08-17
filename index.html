@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoEffortless — Effortless Business Communication</title>
     <meta name="description" content="We help South African businesses respond to customers instantly — answer questions, send invoices, book appointments, and follow up on leads — all through WhatsApp. No tech skills needed." />
+    <meta property="og:title" content="AutoEffortless — Effortless Business Communication" />
+    <meta property="og:description" content="We help South African businesses respond to customers instantly on WhatsApp — answer questions, send invoices, book appointments, follow up on leads, and manage your website." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://autoeffortless.com/" />
+    <meta property="og:image" content="https://autoeffortless.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+        (function () {
+            function send(extra) {
+                try {
+                    var payload = Object.assign({
+                        clientId: 9,
+                        path: location.pathname + location.search,
+                        title: document.title,
+                        referrer: document.referrer || '',
+                        ua: navigator.userAgent,
+                        screen: screen.width + 'x' + screen.height,
+                        section: 'main'
+                    }, extra || {});
+                    if (/HeadlessChrome|TingalingSiteMonitor/i.test(payload.ua)) return;
+                    if (navigator.webdriver) return;
+                    if (navigator.sendBeacon) {
+                        navigator.sendBeacon('https://app.autoeffortless.com/api/site-track', JSON.stringify(payload));
+                    } else {
+                        fetch('https://app.autoeffortless.com/api/site-track', { method: 'POST', body: JSON.stringify(payload), keepalive: true });
+                    }
+                } catch (e) {}
+            }
+            window.AETrack = function (label, title) { send({ event: true, label: label, title: title || document.title }); };
+            if (document.readyState === 'complete') send({});
+            else window.addEventListener('load', function () { send({}); });
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -285,11 +319,11 @@
         <div class="container">
             <div class="grid">
                 <div>
-                    <div class="badge">Trusted by SA Businesses</div>
+                    <div class="badge">Now live with SA businesses</div>
                     <h1>Your business never misses a lead.</h1>
                     <p>We help you reply to customers instantly on WhatsApp — answer questions, take orders, send payment links, chase unpaid bills, book appointments, follow up leads, and manage your website. All in one place. You focus on running your business.</p>
                     <div class="buttons">
-                        <a href="https://app.autoeffortless.com/signin" class="btn btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;">Create Free Account →</a>
+                        <a href="#contact" class="btn btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;">Request a Demo →</a>
                         <a href="#pricing" class="btn btn-outline">See Plans &amp; Pricing</a>
                         <a href="#contact" class="btn btn-outline">Talk to Us</a>
                     </div>
@@ -326,6 +360,32 @@
                             <div class="msg out" style="background:#1b1b2f; color:#fff;">✅ Saturday 9 AM booked. You'll receive a confirmation shortly. See you then!</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="section" style="padding:3.5rem 0; background:#f8f7f4;">
+        <div class="container">
+            <div class="section-title">
+                <span>Who We Work With</span>
+                <h2>Real businesses, live today</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>Ting-A-Ling Schools</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">Pre-primary &amp; special needs school · Richards Bay</p>
+                    <p>WhatsApp assistant answering every parent enquiry around the clock — fees, enrolment, uniform, and events — instantly, in a natural tone.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>NG Kerk Meerensee</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">Church · Richards Bay</p>
+                    <p>Website hosted, secured, and managed by us — with an AI editor that turns plain-language requests into published updates in minutes.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Your business, next</h3>
+                    <p>Whatever you sell, we handle the conversation — from first enquiry to invoice paid, on autopilot.</p>
                 </div>
             </div>
         </div>
@@ -404,8 +464,8 @@
                     <p>Customers can order through WhatsApp and get an instant payment link with the exact amount. Also send invoices with payment links for unpaid bills.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Client dashboard</h4>
-                    <p>A simple online dashboard where you can update your info, view conversations, see reports, and make changes yourself.</p>
+                    <h4>Client dashboard &amp; analytics</h4>
+                    <p>A simple dashboard where you update your info, view every conversation, and see live reports — traffic, enquiries, and conversions at a glance.</p>
                 </div>
                 <div class="feature-card">
                     <h4>Books appointments and tours</h4>
@@ -416,8 +476,8 @@
                     <p>When someone enquires but doesn't follow through, the system gently reminds them — no leads slip away.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Website hosting & management</h4>
-                    <p>We host, secure, and update your website. Your contact form feeds straight into your WhatsApp. One less thing to worry about.</p>
+                    <h4>Website hosting &amp; AI editing</h4>
+                    <p>We host, secure, and update your website. Ask for changes in plain language and we publish them — no tech skills, no waiting. Contact forms feed straight into WhatsApp.</p>
                 </div>
             </div>
         </div>
@@ -516,23 +576,18 @@
                 <span>Get In Touch</span>
                 <h2>We'll get back to you within hours</h2>
             </div>
-            <div style="max-width:520px; margin:0 auto;">
-                <form action="mailto:info@autoeffortless.com" method="post" enctype="text/plain" style="text-align:left;">
-                    <div style="margin-bottom:1rem;">
-                        <label for="name" style="font-size:0.85rem; font-weight:600; color:#1b1b2f; display:block; margin-bottom:0.3rem;">Your Name</label>
-                        <input type="text" id="name" name="Name" required placeholder="e.g. Thabo Mokoena" style="width:100%; padding:0.75rem 1rem; border:1px solid #e8e6e0; border-radius:8px; font-size:0.95rem; font-family:inherit;" />
-                    </div>
-                    <div style="margin-bottom:1rem;">
-                        <label for="email" style="font-size:0.85rem; font-weight:600; color:#1b1b2f; display:block; margin-bottom:0.3rem;">Email</label>
-                        <input type="email" id="email" name="Email" required placeholder="e.g. thabo@example.com" style="width:100%; padding:0.75rem 1rem; border:1px solid #e8e6e0; border-radius:8px; font-size:0.95rem; font-family:inherit;" />
-                    </div>
-                    <div style="margin-bottom:1.5rem;">
-                        <label for="message" style="font-size:0.85rem; font-weight:600; color:#1b1b2f; display:block; margin-bottom:0.3rem;">Message</label>
-                        <textarea id="message" name="Message" required placeholder="Tell us about your business and how we can help..." rows="5" style="width:100%; padding:0.75rem 1rem; border:1px solid #e8e6e0; border-radius:8px; font-size:0.95rem; font-family:inherit; resize:vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
-                    <p style="font-size:0.8rem; color:#888; margin-top:0.5rem; text-align:center;">Or email us directly at <a href="mailto:info@autoeffortless.com" style="color:#c8a34e;">info@autoeffortless.com</a></p>
-                </form>
+            <div style="max-width:640px; margin:0 auto;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+                    <a href="https://wa.me/27615274429" class="problem-card" style="text-decoration:none; display:block; text-align:center;" onclick="window.AETrack && AETrack('contact-whatsapp')">
+                        <h3>📱 WhatsApp us</h3>
+                        <p style="margin-top:0.5rem;">Fastest way to reach us — tap to chat now. We reply within hours.</p>
+                    </a>
+                    <a href="mailto:info@autoeffortless.com" class="problem-card" style="text-decoration:none; display:block; text-align:center;" onclick="window.AETrack && AETrack('contact-email')">
+                        <h3>✉️ Email us</h3>
+                        <p style="margin-top:0.5rem;">info@autoeffortless.com — for proposals, invoices, and longer questions.</p>
+                    </a>
+                </div>
+                <p style="font-size:0.85rem; color:#888; margin-top:1.5rem; text-align:center;">Richards Bay, South Africa · We reply within hours, 7 days a week.</p>
             </div>
         </div>
     </section>
@@ -545,7 +600,7 @@
             <div class="cta-box">
                 <h2>Prefer WhatsApp?</h2>
                 <p>Just tap the button below and chat with us directly.</p>
-                <a href="https://wa.me/2788363027" class="btn btn-white" style="display:inline-flex; align-items:center; gap:0.5rem;">📱 Chat on WhatsApp</a>
+                <a href="https://wa.me/27615274429" class="btn btn-white" style="display:inline-flex; align-items:center; gap:0.5rem;" onclick="window.AETrack && AETrack('cta-whatsapp')">📱 Chat on WhatsApp</a>
             </div>
         </div>
     </section>
