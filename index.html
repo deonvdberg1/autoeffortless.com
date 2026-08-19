@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoEffortless — AI, Built &amp; Managed For Your Business</title>
-    <meta name="description" content="AutoEffortless designs and deploys AI for South African businesses — apps, websites, AI email & calendar syncing, and AI booking systems. Built for you, managed for you. No tech skills needed." />
+    <meta name="description" content="AutoEffortless designs and deploys AI solutions for South African businesses — custom AI assistants, apps, websites, AI email & calendar syncing, and AI booking systems. Built for you, managed for you. No tech skills needed." />
     <meta property="og:title" content="AutoEffortless — AI, Built &amp; Managed For Your Business" />
-    <meta property="og:description" content="We design and deploy AI for your business — apps, websites, AI email & calendar syncing, and AI booking systems. Built for you, managed for you." />
+    <meta property="og:description" content="AI solutions for your business — custom assistants, apps, websites, AI email & calendar syncing, and AI booking systems. Built and managed for you." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://autoeffortless.com/" />
     <meta property="og:image" content="https://autoeffortless.com/og-image.png" />
@@ -146,6 +146,9 @@
         .svc .body p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
         .svc .body .tag { display: inline-block; margin-top: 0.9rem; font-size: 0.7rem; font-weight: 700; color: var(--gold-deep); background: var(--gold-soft); padding: 0.3rem 0.8rem; border-radius: 20px; }
         .svc.addon { border-style: dashed; }
+        .svc.ai-solutions { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.15fr; align-items: stretch; background: linear-gradient(135deg, #fff, #fbf6ea); border-color: rgba(200,163,78,0.45); }
+        .svc.ai-solutions .imgwrap { height: auto; min-height: 250px; }
+        @media (max-width: 900px) { .svc.ai-solutions { grid-template-columns: 1fr; } .svc.ai-solutions .imgwrap { min-height: 190px; } }
         @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
 
         /* Steps */
@@ -298,6 +301,7 @@
                         <a href="#services" class="btn btn-ghost">See What We Build</a>
                     </div>
                     <div class="chips">
+                        <span>AI Solutions</span>
                         <span>Apps &amp; Websites</span>
                         <span>AI Email &amp; Calendar</span>
                         <span>AI Booking Systems</span>
@@ -327,6 +331,18 @@
                 <p>From idea to launch — we handle the design, the build, and the running of it.</p>
             </div>
             <div class="svc-grid">
+                <div class="svc ai-solutions reveal">
+                    <div class="imgwrap"><img src="/img/hero-ai.jpg" alt="AI Solutions" loading="lazy" /></div>
+                    <div class="body">
+                        <div class="icrow">
+                            <div class="iconbox"><svg class="ic"><use href="#i-bot"/></svg></div>
+                            <div class="arrow"><svg class="ic" style="width:16px;height:16px;"><use href="#i-arrow"/></svg></div>
+                        </div>
+                        <h3>AI Solutions</h3>
+                        <p>Custom AI built around how your business works — assistants that answer, automate, and sell for you. Chatbots, workflow automation, lead qualification, document handling — designed, deployed, and managed end to end.</p>
+                        <span class="tag">AI, built &amp; managed</span>
+                    </div>
+                </div>
                 <div class="svc reveal">
                     <div class="imgwrap"><img src="/img/apps.jpg" alt="Design and deploy apps" loading="lazy" /></div>
                     <div class="body">
@@ -577,6 +593,7 @@
                     <label for="cf-need">What do you need?</label>
                     <select id="cf-need" required>
                         <option value="" disabled selected>Choose one…</option>
+                        <option>AI Solutions</option>
                         <option>Custom App</option>
                         <option>Website Design &amp; Deployment</option>
                         <option>AI Email &amp; Calendar Syncing</option>
@@ -653,6 +670,7 @@
                 </div>
                 <div>
                     <h5>Services</h5>
+                    <a href="#services">AI Solutions</a>
                     <a href="#services">Apps</a>
                     <a href="#services">Websites</a>
                     <a href="#services">AI Email &amp; Calendar</a>
